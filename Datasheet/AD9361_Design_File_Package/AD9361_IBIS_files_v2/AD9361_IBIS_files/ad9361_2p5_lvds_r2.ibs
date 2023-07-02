@@ -1,0 +1,2126 @@
+|==============================================================================|
+|                 This file is an IBIS representation of the                   |
+|                               analog devices                                 |
+|                                    AD9361                                    |
+|                                                                              |
+|=================== Header Section -------------------------------------------|
+|***************************************************************************
+[IBIS Ver]  3.2
+[File Name] ad9361_2p5_lvds_r2.ibs
+[File Rev]  2
+[Source]    This file originated at Analog Devices. 
+[Date]      03-19-2012
+[Notes]     
+|    Quality Check Passes IBIS Checker with 7 warnings. The LVDS 
+|    pullup and pulldown curves do represent circuit operation, 
+|    even though the IBIS modelling inidicates warnings. For       
+|    proper simulation of LVDS drivers, external placement 50ohm 
+|    terminations to 1.2V is necessary. 
+
+|
+|
+[Disclaimer]
+|    This IBIS model is provided "AS IS, Where IS, AND WITH NO
+|    WARRANTY OF ANY KINND EITHER EXPRESSED OR IMPLIED, INCLUDING
+|    BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MECHANTABILITY
+|    AND FITNESS FOR A PARTICULAR PURPOSE."
+|
+|    In no event will Analog Devices be liable for special, colloateral,
+|    incidental, or consequential damages in connection with or
+|    arising out of the use of this IBIS model. Analog Devices reserves
+|    the right to make changes to the products and IBIS models without
+|    prior notice.
+|
+[Copyright]    copyright (c)2011 Analog Devices, All rights reserved.
+|
+|*************************************************************************
+|
+|
+|
+|
+[Component] AD9361
+[Manufacturer] Analog Devices
+|
+[Package]
+|Variable typ       min       max
+R_pkg  0.350ohms     NA       NA
+L_pkg  2.0nH         NA       NA
+C_pkg  .50pF         NA       NA 
+|
+[Pin]     signal_name           model_name      R_pin     L_pin     C_pin
+A1        RX2A_N                NC              NA        NA        NA
+A2        RX2A_P                NC              NA        NA        NA
+A3        RX2_SA_LNA_OUT        NC              NA        NA        NA
+A4        RX2_SA_LNA_IN         NC              NA        NA        NA
+A5        TX_MON2               NC              NA        NA        NA
+A6        VSSA                  GND             NA        NA        NA
+A7        TX2A_N                NC              NA        NA        NA
+A8        TX2A_P                NC              NA        NA        NA
+A9        TX2B_N                NC              NA        NA        NA
+A10       TX2B_P                NC              NA        NA        NA
+A11       VDDA1P1_TX_VCO        NC              NA        NA        NA
+A12       TX_EXT_LO_IN          NC              NA        NA        NA
+B1        VSSA                  GND             NA        NA        NA
+B2        VSSA                  GND             NA        NA        NA
+B3        AUXDAC1               NC              NA        NA        NA
+B4        GPO_3                 GPO             NA        NA        NA
+B5        GPO_2                 GPO             NA        NA        NA
+B6        GPO_1                 GPO             NA        NA        NA
+B7        GPO_0                 GPO             NA        NA        NA
+B8        VDDA_GPO              POWER           NA        NA        NA
+B9        VDDA1P3_TX_LO         POWER           NA        NA        NA
+B10       VDDA1P3_TX_VCO_LDO    POWER           NA        NA        NA
+B11       TX_VCO_LDO_OUT        NC              NA        NA        NA
+B12       VSSA                  GND             NA        NA        NA
+C1        RX2C_P                NC              NA        NA        NA
+C2        VSSA                  GND             NA        NA        NA
+C3        AUXDAC2               NC              NA        NA        NA
+C4        TEST/ENABLE           cmos_input      NA        NA        NA
+C5        CTRL_IN0              cmos_input      NA        NA        NA
+C6        CTRL_IN1              cmos_input      NA        NA        NA
+C7        VSSA                  GND             NA        NA        NA
+C8        VSSA                  GND             NA        NA        NA
+C9        VSSA                  GND             NA        NA        NA
+C10       VSSA                  GND             NA        NA        NA
+C11       VSSA                  GND             NA        NA        NA
+C12       VSSA                  GND             NA        NA        NA
+D1        RX2C_N                NC              NA        NA        NA
+D2        VDDA1P3_RX_RF         POWER           NA        NA        NA
+D3        VDDA1P3_RX_TX         POWER           NA        NA        NA
+D4        CTRL_OUT0             cmos_output     NA        NA        NA
+D5        CTRL_IN3              cmos_input      NA        NA        NA
+D6        CTRL_IN2              cmos_input      NA        NA        NA
+D7        P0_D9-TX_D4_P         p0_LVDS_IN      NA        NA        NA
+D8        P0_D7-TX_D3_P         p0_LVDS_IN      NA        NA        NA
+D9        P0_D5-TX_D2_P         p0_LVDS_IN      NA        NA        NA
+D10       P0_D3-TX_D1_P         p0_LVDS_IN      NA        NA        NA
+D11       P0_D1-TX_D0_P         p0_LVDS_IN      NA        NA        NA
+D12       VSSD                  GND             NA        NA        NA
+E1        RX2B_P                NC              NA        NA        NA
+E2        VDDA1P3_RX_LO         POWER           NA        NA        NA
+E3        VDDA1P3_TX_LO_BUFFER  POWER           NA        NA        NA
+E4        CTRL_OUT1             cmos_output     NA        NA        NA
+E5        CTRL_OUT2             cmos_output     NA        NA        NA
+E6        CTRL_OUT3             cmos_output     NA        NA        NA
+E7        P0_D11-TX_D5_P        p0_LVDS_IN      NA        NA        NA
+E8        P0_D8-TX_D4_N         p0_LVDS_IN      NA        NA        NA
+E9        P0_D6-TX_D3_N         p0_LVDS_IN      NA        NA        NA
+E10       P0_D4-TX_D2_N         p0_LVDS_IN      NA        NA        NA
+E11       P0_D2-TX_D1_N         p0_LVDS_IN      NA        NA        NA
+E12       P0_D0-TX_D0_N         p0_LVDS_IN      NA        NA        NA
+F1        RX2B_N                NC              NA        NA        NA
+F2        VDDA1P3_RX_VCO_LDO    POWER           NA        NA        NA
+F3        VSSA                  GND             NA        NA        NA
+F4        CTRL_OUT6             cmos_output     NA        NA        NA
+F5        CTRL_OUT5             cmos_output     NA        NA        NA
+F6        CTRL_OUT4             cmos_output     NA        NA        NA
+F7        VSSD                  GND             NA        NA        NA
+F8        P0_D10-TX_D5_N        p0_LVDS_IN      NA        NA        NA
+F9        VSSD                  GND             NA        NA        NA
+F10       FB_CLK_P              p0_LVDS_IN      NA        NA        NA
+F11       VSSD                  GND             NA        NA        NA
+F12       VDDD1P3_DIG           POWER           NA        NA        NA
+G1        RX_EXT_LO_IN          NC              NA        NA        NA
+G2        RX_VCO_LDO_OUT        NC              NA        NA        NA
+G3        VDDA1P1_RX_VCO        NC              NA        NA        NA
+G4        CTRL_OUT7             cmos_output     NA        NA        NA
+G5        EN_AGC                cmos_input      NA        NA        NA
+G6        ENABLE                cmos_input      NA        NA        NA
+G7        RX_FRAME_N            p1_LVDS_OUT     NA        NA        NA
+G8        RX_FRAME_P            p1_LVDS_OUT     NA        NA        NA
+G9        TX_FRAME_P            p0_LVDS_IN      NA        NA        NA
+G10       FB_CLK_N              p0_LVDS_IN      NA        NA        NA
+G11       DATA_CLK_P            p1_LVDS_OUT     NA        NA        NA
+G12       VSSD                  GND             NA        NA        NA
+H1        RX1B_P                NC              NA        NA        NA
+H2        VSSA                  GND             NA        NA        NA
+H3        VSSA                  GND             NA        NA        NA
+H4        TXNRX                 cmos_input      NA        NA        NA
+H5        SYNC_IN               cmos_input      NA        NA        NA
+H6        REF_CLK_IN            NC              NA        NA        NA
+H7        VSSD                  GND             NA        NA        NA
+H8        P1_D11-RX_D5_P        p1_LVDS_OUT     NA        NA        NA
+H9        TX_FRAME_N            p0_LVDS_IN      NA        NA        NA
+H10       VSSD                  GND             NA        NA        NA
+H11       DATA_CLK_N            p1_LVDS_OUT     NA        NA        NA
+H12       VDD_INTERFACE         POWER           NA        NA        NA
+J1        RX1B_N                NC              NA        NA        NA
+J2        VSSA                  GND             NA        NA        NA
+J3        VDDA1P3_RX_SYNTH      POWER           NA        NA        NA
+J4        SPI_DI                cmos_bidir      NA        NA        NA
+J5        SPI_CLK               cmos_input      NA        NA        NA
+J6        CLK_OUT               cmos_output     NA        NA        NA
+J7        P1_D10-RX_D5_N        p1_LVDS_OUT     NA        NA        NA
+J8        P1_D9-RX_D4_P         p1_LVDS_OUT     NA        NA        NA
+J9        P1_D7-RX_D3_P         p1_LVDS_OUT     NA        NA        NA
+J10       P1_D5-RX_D2_P         p1_LVDS_OUT     NA        NA        NA
+J11       P1_D3-RX_D1_P         p1_LVDS_OUT     NA        NA        NA
+J12       P1_D1-RX_D0_P         p1_LVDS_OUT     NA        NA        NA
+K1        RX1C_P                NC              NA        NA        NA
+K2        VSSA                  GND             NA        NA        NA
+K3        VDDA1P3_TX_SYNTH      POWER           NA        NA        NA
+K4        VDDA1P3_BB            POWER           NA        NA        NA
+K5        RESETB                cmos_input      NA        NA        NA
+K6        SPI_ENB               cmos_input      NA        NA        NA
+K7        P1_D8-RX_D4_N         p1_LVDS_OUT     NA        NA        NA
+K8        P1_D6-RX_D3_N         p1_LVDS_OUT     NA        NA        NA
+K9        P1_D4-RX_D2_N         p1_LVDS_OUT     NA        NA        NA
+K10       P1_D2-RX_D1_N         p1_LVDS_OUT     NA        NA        NA
+K11       P1_D0-RX_D0_N         p1_LVDS_OUT     NA        NA        NA
+K12       VSSD                  GND             NA        NA        NA
+L1        RX1C_N                NC              NA        NA        NA
+L2        VSSA                  GND             NA        NA        NA
+L3        VSSA                  GND             NA        NA        NA
+L4        RBIAS                 NC              NA        NA        NA
+L5        AUXADC                NC              NA        NA        NA
+L6        SPI_DO                cmos_out_3st    NA        NA        NA
+L7        VSSA                  GND             NA        NA        NA
+L8        VSSA                  GND             NA        NA        NA
+L9        VSSA                  GND             NA        NA        NA
+L10       VSSA                  GND             NA        NA        NA
+L11       VSSA                  GND             NA        NA        NA
+L12       VSSA                  GND             NA        NA        NA
+M1        RX1A_P                NC              NA        NA        NA
+M2        RX1A_N                NC              NA        NA        NA
+M3        RX1_SA_LNA_OUT        NC              NA        NA        NA
+M4        RX1_SA_LNA_IN         NC              NA        NA        NA
+M5        TX_MON1               NC              NA        NA        NA
+M6        VSSA                  GND             NA        NA        NA
+M7        TX1A_P                NC              NA        NA        NA
+M8        TX1A_N                NC              NA        NA        NA
+M9        TX1B_P                NC              NA        NA        NA
+M10       TX1B_N                NC              NA        NA        NA
+M11       XTALP                 NC              NA        NA        NA
+M12       XTALN                 NC              NA        NA        NA
+|
+|****************************************************************************
+|     
+[Diff_pin]   inv_pin    vdiff    tdelay_typ    tdelay_min    tdelay_max
+|
+| LVDS OUTPUTS (p1):  The Diff_pin is "P" pin and the inv_pin is the "N" pin
+|
+|
+| RX_FRAME_P      RX_FRAME_N
+G8                G7             NA        0             0             0
+|
+| DATA_CLK_P       DATA_CLK_N
+G11               H11            NA        0             0             0
+|
+| P1_D1-RX_D0_P   P1_D0-RX_D0_N
+J12               K11            NA        0             0             0
+|
+| P1_D3-RX_D1_P   P1_D2-RX_D1_N
+J11               K10            NA        0             0             0
+|
+| P1_D5-RX_D2_P   P1_D4-RX_D2_N
+J10               K9             NA        0             0             0
+|
+| P1_D7-RX_D3_P   P1_D6-RX_D3_N
+J9                K8             NA        0             0             0
+|
+| P1_D9-RX_D4_P   P1_D8-RX_D4_N
+J8                K7             NA        0             0             0
+|
+| P1_D11-RX_D5_P  P1_D10-RX_D5_N
+H8                J7             NA        0             0             0
+|
+|
+|
+|****************************************************************************
+|
+|
+[Model] cmos_input
+Model_type Input
+Vinl = 0.875
+Vinh = 1.625
+|       typ      min      max
+C_comp  4pF      NA       NA
+|
+|                       typ    min    max
+[Voltage Range]         2.500V  NA     NA
+[GND Clamp Reference]   0.000V  NA     NA
+[POWER Clamp Reference] 2.500V  NA     NA
+|
+[GND Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.85758510000  NA      NA
+-2.4    -0.80233420000  NA      NA
+-2.3    -0.74715480000  NA      NA
+-2.2    -0.69205760000  NA      NA
+-2.1    -0.63705640000  NA      NA
+-2.0    -0.58216820000  NA      NA
+-1.9    -0.52741540000  NA      NA
+-1.8    -0.47282740000  NA      NA
+-1.7    -0.41844470000  NA      NA
+-1.6    -0.36432460000  NA      NA
+-1.5    -0.31055140000  NA      NA
+-1.4    -0.25725530000  NA      NA
+-1.3    -0.20464220000  NA      NA
+-1.2    -0.15304610000  NA      NA
+-1.1    -0.10311040000  NA      NA
+-1.0    -0.05647296000  NA      NA
+-0.9    -0.01866477000  NA      NA
+-0.8    -0.00358393100  NA      NA
+-0.7    -0.00172495600  NA      NA
+-0.6    -0.00085033000  NA      NA
+-0.5    -0.00024293950  NA      NA
+-0.4    -0.00002356171  NA      NA
+-0.3    -0.00000083664  NA      NA
+-0.2    -0.00000001872  NA      NA
+-0.1    -0.00000000051  NA      NA
+0.0     -0.00000000012  NA      NA
+0.1     -0.00000000010  NA      NA
+0.2     -0.00000000009  NA      NA
+0.3     -0.00000000008  NA      NA
+0.4     -0.00000000007  NA      NA
+0.5     -0.00000000006  NA      NA
+0.6     -0.00000000005  NA      NA
+0.7     -0.00000000004  NA      NA
+0.8     -0.00000000004  NA      NA
+0.9     -0.00000000003  NA      NA
+1.0     -0.00000000002  NA      NA
+1.1     -0.00000000001  NA      NA
+1.2     -0.00000000001  NA      NA
+1.3     0.00000000000   NA      NA
+1.4     0.00000000001   NA      NA
+1.5     0.00000000001   NA      NA
+1.6     0.00000000002   NA      NA
+1.7     0.00000000003   NA      NA
+1.8     0.00000000003   NA      NA
+1.9     0.00000000004   NA      NA
+2.0     0.00000000005   NA      NA
+2.1     0.00000000005   NA      NA
+2.2     0.00000000006   NA      NA
+2.3     0.00000000007   NA      NA
+2.4     0.00000000008   NA      NA
+2.5     0.00000000009   NA      NA
+
+|
+[POWER Clamp]
+0.0     0.00000000009   NA      NA
+-0.1    0.00000000043   NA      NA
+-0.2    0.00000001386   NA      NA
+-0.3    0.00000048754   NA      NA
+-0.4    0.00001145612   NA      NA
+-0.5    0.00012702390   NA      NA
+-0.6    0.00054081190   NA      NA
+-0.7    0.00120797100   NA      NA
+-0.8    0.00309164300   NA      NA
+-0.9    0.02014503000   NA      NA
+-1.0    0.05925775000   NA      NA
+-1.1    0.10646550000   NA      NA
+-1.2    0.15683560000   NA      NA
+-1.3    0.20879250000   NA      NA
+-1.4    0.26167910000   NA      NA
+-1.5    0.31517120000   NA      NA
+-1.6    0.36908710000   NA      NA
+-1.7    0.42331560000   NA      NA
+-1.8    0.47778420000   NA      NA
+-1.9    0.53244250000   NA      NA
+-2.0    0.58725470000   NA      NA
+-2.1    0.64219420000   NA      NA
+-2.2    0.69724090000   NA      NA
+-2.3    0.75237910000   NA      NA
+-2.4    0.80759630000   NA      NA
+-2.5    0.86288240000   NA      NA
+|
+|--end cmos_input model-----------------------------------------
+
+|
+|
+
+[model] cmos_out_3st
+Model_type 3-state
+|
+Cref=3.000pF
+Rref=10kOhm
+Vref=2.5V
+Vmeas=2.3V
+|
+|
+C_comp                   4pF    NA     NA
+|
+[Voltage Range]         2.500V  NA     NA
+[GND Clamp Reference]   0.000V  NA     NA
+[POWER Clamp Reference] 2.500V  NA     NA
+|
+[GND Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.85758510000  NA      NA
+-2.4    -0.80233420000  NA      NA
+-2.3    -0.74715480000  NA      NA
+-2.2    -0.69205760000  NA      NA
+-2.1    -0.63705640000  NA      NA
+-2.0    -0.58216820000  NA      NA
+-1.9    -0.52741540000  NA      NA
+-1.8    -0.47282740000  NA      NA
+-1.7    -0.41844470000  NA      NA
+-1.6    -0.36432460000  NA      NA
+-1.5    -0.31055140000  NA      NA
+-1.4    -0.25725530000  NA      NA
+-1.3    -0.20464220000  NA      NA
+-1.2    -0.15304610000  NA      NA
+-1.1    -0.10311040000  NA      NA
+-1.0    -0.05647296000  NA      NA
+-0.9    -0.01866477000  NA      NA
+-0.8    -0.00358393100  NA      NA
+-0.7    -0.00172495600  NA      NA
+-0.6    -0.00085033000  NA      NA
+-0.5    -0.00024293950  NA      NA
+-0.4    -0.00002356171  NA      NA
+-0.3    -0.00000083664  NA      NA
+-0.2    -0.00000001872  NA      NA
+-0.1    -0.00000000051  NA      NA
+0.0     -0.00000000012  NA      NA
+0.1     -0.00000000010  NA      NA
+0.2     -0.00000000009  NA      NA
+0.3     -0.00000000008  NA      NA
+0.4     -0.00000000007  NA      NA
+0.5     -0.00000000006  NA      NA
+0.6     -0.00000000005  NA      NA
+0.7     -0.00000000004  NA      NA
+0.8     -0.00000000004  NA      NA
+0.9     -0.00000000003  NA      NA
+1.0     -0.00000000002  NA      NA
+1.1     -0.00000000001  NA      NA
+1.2     -0.00000000001  NA      NA
+1.3     0.00000000000   NA      NA
+1.4     0.00000000001   NA      NA
+1.5     0.00000000001   NA      NA
+1.6     0.00000000002   NA      NA
+1.7     0.00000000003   NA      NA
+1.8     0.00000000003   NA      NA
+1.9     0.00000000004   NA      NA
+2.0     0.00000000005   NA      NA
+2.1     0.00000000005   NA      NA
+2.2     0.00000000006   NA      NA
+2.3     0.00000000007   NA      NA
+2.4     0.00000000008   NA      NA
+2.5     0.00000000009   NA      NA
+
+|
+||
+[POWER Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+0.0     0.00000000009   NA      NA
+-0.1    0.00000000043   NA      NA
+-0.2    0.00000001386   NA      NA
+-0.3    0.00000048754   NA      NA
+-0.4    0.00001145612   NA      NA
+-0.5    0.00012702390   NA      NA
+-0.6    0.00054081190   NA      NA
+-0.7    0.00120797100   NA      NA
+-0.8    0.00309164300   NA      NA
+-0.9    0.02014503000   NA      NA
+-1.0    0.05925775000   NA      NA
+-1.1    0.10646550000   NA      NA
+-1.2    0.15683560000   NA      NA
+-1.3    0.20879250000   NA      NA
+-1.4    0.26167910000   NA      NA
+-1.5    0.31517120000   NA      NA
+-1.6    0.36908710000   NA      NA
+-1.7    0.42331560000   NA      NA
+-1.8    0.47778420000   NA      NA
+-1.9    0.53244250000   NA      NA
+-2.0    0.58725470000   NA      NA
+-2.1    0.64219420000   NA      NA
+-2.2    0.69724090000   NA      NA
+-2.3    0.75237910000   NA      NA
+-2.4    0.80759630000   NA      NA
+-2.5    0.86288240000   NA      NA
+
+|
+|
+[Pulldown]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.00312170000  NA      NA
+-2.4    -0.00351170000  NA      NA
+-2.3    -0.00389790000  NA      NA
+-2.2    -0.00428140000  NA      NA
+-2.1    -0.00466230000  NA      NA
+-2.0    -0.00504030000  NA      NA
+-1.9    -0.00541390000  NA      NA
+-1.8    -0.00578100000  NA      NA
+-1.7    -0.00613720000  NA      NA
+-1.6    -0.00647500000  NA      NA
+-1.5    -0.00678120000  NA      NA
+-1.4    -0.00703460000  NA      NA
+-1.3    -0.00720820000  NA      NA
+-1.2    -0.00729030000  NA      NA
+-1.1    -0.00729810000  NA      NA
+-1.0    -0.00724772000  NA      NA
+-0.9    -0.00714087000  NA      NA
+-0.8    -0.00696845900  NA      NA
+-0.7    -0.00670883900  NA      NA
+-0.6    -0.00631602600  NA      NA
+-0.5    -0.00568445050  NA      NA
+-0.4    -0.00468746729  NA      NA
+-0.3    -0.00352761736  NA      NA
+-0.2    -0.00235414328  NA      NA
+-0.1    -0.00117819049  NA      NA
+0.0     0.00000000001   NA      NA
+0.1     0.00117440710   NA      NA
+0.2     0.00233864309   NA      NA
+0.3     0.00349216908   NA      NA
+0.4     0.00463440307   NA      NA
+0.5     0.00576471606   NA      NA
+0.6     0.00688242805   NA      NA
+0.7     0.00798680004   NA      NA
+0.8     0.00907702604   NA      NA
+0.9     0.01015223003   NA      NA
+1.0     0.01121144002   NA      NA
+1.1     0.01134267001   NA      NA
+1.2     0.01160431001   NA      NA
+1.3     0.01214049000   NA      NA
+1.4     0.01225360999   NA      NA
+1.5     0.01327757999   NA      NA
+1.6     0.01428203998   NA      NA
+1.7     0.01526557997   NA      NA
+1.8     0.01622657997   NA      NA
+1.9     0.01716325996   NA      NA
+2.0     0.01807358995   NA      NA
+2.1     0.01895523995   NA      NA
+2.2     0.01980555994   NA      NA
+2.3     0.02062143993   NA      NA
+2.4     0.02139918992   NA      NA
+2.5     0.02400965000   NA      NA
+2.6     0.02447916000   NA      NA
+2.7     0.02484081000   NA      NA
+2.8     0.02510227000   NA      NA
+2.9     0.02529845000   NA      NA
+3.0     0.02547780000   NA      NA
+3.1     0.02565376000   NA      NA
+3.2     0.02584631000   NA      NA
+3.3     0.02712415000   NA      NA
+3.4     0.04347250000   NA      NA
+3.5     0.08174848000   NA      NA
+3.6     0.12790070000   NA      NA
+3.7     0.17701450000   NA      NA
+3.8     0.22760150000   NA      NA
+3.9     0.27905660000   NA      NA
+4.0     0.33108030000   NA      NA
+4.1     0.38350390000   NA      NA
+4.2     0.43622630000   NA      NA
+4.3     0.48923040000   NA      NA
+4.4     0.54265730000   NA      NA
+4.5     0.59645870000   NA      NA
+4.6     0.65050570000   NA      NA
+4.7     0.70474270000   NA      NA
+4.8     0.75917450000   NA      NA
+4.9     0.81387320000   NA      NA
+5.0     0.86884470000   NA      NA
+|
+|
+[Pullup]                                        
+| Voltage  I(typ)       I(min)  I(max)
+5.0     -0.86636870000  NA      NA
+4.9     -0.81166180000  NA      NA
+4.8     -0.75709070000  NA      NA
+4.7     -0.70269340000  NA      NA
+4.6     -0.64854260000  NA      NA
+4.5     -0.59477610000  NA      NA
+4.4     -0.54141770000  NA      NA
+4.3     -0.48826900000  NA      NA
+4.2     -0.43530580000  NA      NA
+4.1     -0.38257380000  NA      NA
+4.0     -0.33014410000  NA      NA
+3.9     -0.27812540000  NA      NA
+3.8     -0.22669590000  NA      NA
+3.7     -0.17617560000  NA      NA
+3.6     -0.12722060000  NA      NA
+3.5     -0.08147800000  NA      NA
+3.4     -0.04447034000  NA      NA
+3.3     -0.03007328000  NA      NA
+3.2     -0.02874622000  NA      NA
+3.1     -0.02820000000  NA      NA
+3.0     -0.02761748000  NA      NA
+2.9     -0.02700266000  NA      NA
+2.8     -0.02637516000  NA      NA
+2.7     -0.02571576000  NA      NA
+2.6     -0.02501935000  NA      NA
+2.5     -0.02428925000  NA      NA
+2.4     -0.02352860000  NA      NA
+2.3     -0.02274006000  NA      NA
+2.2     -0.02192593000  NA      NA
+2.1     -0.02108819000  NA      NA
+2.0     -0.02022858000  NA      NA
+1.9     -0.01934864000  NA      NA
+1.8     -0.01844974000  NA      NA
+1.7     -0.01753309000  NA      NA
+1.6     -0.01659979000  NA      NA
+1.5     -0.01565083000  NA      NA
+1.4     -0.01468711000  NA      NA
+1.3     -0.01370944000  NA      NA
+1.2     -0.01271856000  NA      NA
+1.1     -0.01171515000  NA      NA
+1.0     -0.01069985000  NA      NA
+0.9     -0.00967321200  NA      NA
+0.8     -0.00863578200  NA      NA
+0.7     -0.00758804700  NA      NA
+0.6     -0.00653046500  NA      NA
+0.5     -0.00546345700  NA      NA
+0.4     -0.00438742000  NA      NA
+0.3     -0.00330272200  NA      NA
+0.2     -0.00220970800  NA      NA
+0.1     -0.00110869900  NA      NA
+0.0     -0.00000000001  NA      NA
+-0.1    0.00111427457   NA      NA
+-0.2    0.00223219514   NA      NA
+-0.3    0.00335364746   NA      NA
+-0.4    0.00447453988   NA      NA
+-0.5    0.00552292110   NA      NA
+-0.6    0.00630211210   NA      NA
+-0.7    0.00686741500   NA      NA
+-0.8    0.00731878700   NA      NA
+-0.9    0.00768480000   NA      NA
+-1.0    0.00793079000   NA      NA
+-1.1    0.00796830000   NA      NA
+-1.2    0.00781440000   NA      NA
+-1.3    0.00755570000   NA      NA
+-1.4    0.00724400000   NA      NA
+-1.5    0.00690360000   NA      NA
+-1.6    0.00654760000   NA      NA
+-1.7    0.00618340000   NA      NA
+-1.8    0.00581540000   NA      NA
+-1.9    0.00544730000   NA      NA
+-2.0    0.00508150000   NA      NA
+-2.1    0.00472030000   NA      NA
+-2.2    0.00436560000   NA      NA
+-2.3    0.00401920000   NA      NA
+-2.4    0.00368320000   NA      NA
+-2.5    0.00335940000   NA      NA
+
+|
+[Ramp]
+|              typ           min        max
+dV/dt_r     1.625V/.111ns     NA         NA
+dV/dt_f     1.625V/.106ns     NA         NA
+R_load=10k  
+|----------------End of cmos_out_3st Model-----------------*******-----------
+
+
+
+[MODEL] cmos_output
+Model_type      Output
+Polarity        Non-Inverting
+Cref  =   3.000pF
+Rref  =   10kOhm
+Vref  =   2.5V
+Vmeas =   2.3V
+|
+|                   typ         min         max
+C_comp             3.000pF      NA          NA
+|
+[Voltage Range]    2.50V        NA          NA
+|
+|
+|
+[GND Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.85758510000  NA      NA
+-2.4    -0.80233420000  NA      NA
+-2.3    -0.74715480000  NA      NA
+-2.2    -0.69205760000  NA      NA
+-2.1    -0.63705640000  NA      NA
+-2.0    -0.58216820000  NA      NA
+-1.9    -0.52741540000  NA      NA
+-1.8    -0.47282740000  NA      NA
+-1.7    -0.41844470000  NA      NA
+-1.6    -0.36432460000  NA      NA
+-1.5    -0.31055140000  NA      NA
+-1.4    -0.25725530000  NA      NA
+-1.3    -0.20464220000  NA      NA
+-1.2    -0.15304610000  NA      NA
+-1.1    -0.10311040000  NA      NA
+-1.0    -0.05647296000  NA      NA
+-0.9    -0.01866477000  NA      NA
+-0.8    -0.00358393100  NA      NA
+-0.7    -0.00172495600  NA      NA
+-0.6    -0.00085033000  NA      NA
+-0.5    -0.00024293950  NA      NA
+-0.4    -0.00002356171  NA      NA
+-0.3    -0.00000083664  NA      NA
+-0.2    -0.00000001872  NA      NA
+-0.1    -0.00000000051  NA      NA
+0.0     -0.00000000012  NA      NA
+0.1     -0.00000000010  NA      NA
+0.2     -0.00000000009  NA      NA
+0.3     -0.00000000008  NA      NA
+0.4     -0.00000000007  NA      NA
+0.5     -0.00000000006  NA      NA
+0.6     -0.00000000005  NA      NA
+0.7     -0.00000000004  NA      NA
+0.8     -0.00000000004  NA      NA
+0.9     -0.00000000003  NA      NA
+1.0     -0.00000000002  NA      NA
+1.1     -0.00000000001  NA      NA
+1.2     -0.00000000001  NA      NA
+1.3     0.00000000000   NA      NA
+1.4     0.00000000001   NA      NA
+1.5     0.00000000001   NA      NA
+1.6     0.00000000002   NA      NA
+1.7     0.00000000003   NA      NA
+1.8     0.00000000003   NA      NA
+1.9     0.00000000004   NA      NA
+2.0     0.00000000005   NA      NA
+2.1     0.00000000005   NA      NA
+2.2     0.00000000006   NA      NA
+2.3     0.00000000007   NA      NA
+2.4     0.00000000008   NA      NA
+2.5     0.00000000009   NA      NA
+|
+|
+[POWER Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+0.0     0.00000000009   NA      NA
+-0.1    0.00000000043   NA      NA
+-0.2    0.00000001386   NA      NA
+-0.3    0.00000048754   NA      NA
+-0.4    0.00001145612   NA      NA
+-0.5    0.00012702390   NA      NA
+-0.6    0.00054081190   NA      NA
+-0.7    0.00120797100   NA      NA
+-0.8    0.00309164300   NA      NA
+-0.9    0.02014503000   NA      NA
+-1.0    0.05925775000   NA      NA
+-1.1    0.10646550000   NA      NA
+-1.2    0.15683560000   NA      NA
+-1.3    0.20879250000   NA      NA
+-1.4    0.26167910000   NA      NA
+-1.5    0.31517120000   NA      NA
+-1.6    0.36908710000   NA      NA
+-1.7    0.42331560000   NA      NA
+-1.8    0.47778420000   NA      NA
+-1.9    0.53244250000   NA      NA
+-2.0    0.58725470000   NA      NA
+-2.1    0.64219420000   NA      NA
+-2.2    0.69724090000   NA      NA
+-2.3    0.75237910000   NA      NA
+-2.4    0.80759630000   NA      NA
+-2.5    0.86288240000   NA      NA
+
+|
+|
+[Pulldown]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.86070680000  NA      NA
+-2.4    -0.80584590000  NA      NA
+-2.3    -0.75105270000  NA      NA
+-2.2    -0.69633900000  NA      NA
+-2.1    -0.64171870000  NA      NA
+-2.0    -0.58720850000  NA      NA
+-1.9    -0.53282930000  NA      NA
+-1.8    -0.47860840000  NA      NA
+-1.7    -0.42458190000  NA      NA
+-1.6    -0.37079960000  NA      NA
+-1.5    -0.31733260000  NA      NA
+-1.4    -0.26428990000  NA      NA
+-1.3    -0.21185040000  NA      NA
+-1.2    -0.16033640000  NA      NA
+-1.1    -0.11040850000  NA      NA
+-1.0    -0.06372068000  NA      NA
+-0.9    -0.02580564000  NA      NA
+-0.8    -0.01055239000  NA      NA
+-0.7    -0.00843379500  NA      NA
+-0.6    -0.00716635600  NA      NA
+-0.5    -0.00592739000  NA      NA
+-0.4    -0.00471102900  NA      NA
+-0.3    -0.00352845400  NA      NA
+-0.2    -0.00235416200  NA      NA
+-0.1    -0.00117819100  NA      NA
+0.0     -0.00000000012  NA      NA
+0.1     0.00117440700   NA      NA
+0.2     0.00233864300   NA      NA
+0.3     0.00349216900   NA      NA
+0.4     0.00463440300   NA      NA
+0.5     0.00576471600   NA      NA
+0.6     0.00688242800   NA      NA
+0.7     0.00798680000   NA      NA
+0.8     0.00907702600   NA      NA
+0.9     0.01015223000   NA      NA
+1.0     0.01121144000   NA      NA
+1.1     0.01225361000   NA      NA
+1.2     0.01327758000   NA      NA
+1.3     0.01428204000   NA      NA
+1.4     0.01526558000   NA      NA
+1.5     0.01622658000   NA      NA
+1.6     0.01716326000   NA      NA
+1.7     0.01807359000   NA      NA
+1.8     0.01895524000   NA      NA
+1.9     0.01980556000   NA      NA
+2.0     0.02062144000   NA      NA
+2.1     0.02139919000   NA      NA
+2.2     0.02213424000   NA      NA
+2.3     0.02282069000   NA      NA
+2.4     0.02345019000   NA      NA
+2.5     0.02400965000   NA      NA
+2.6     0.02447916000   NA      NA
+2.7     0.02484081000   NA      NA
+2.8     0.02510227000   NA      NA
+2.9     0.02529845000   NA      NA
+3.0     0.02547780000   NA      NA
+3.1     0.02565376000   NA      NA
+3.2     0.02584631000   NA      NA
+3.3     0.02712415000   NA      NA
+3.4     0.04347250000   NA      NA
+3.5     0.08174848000   NA      NA
+3.6     0.12790070000   NA      NA
+3.7     0.17701450000   NA      NA
+3.8     0.22760150000   NA      NA
+3.9     0.27905660000   NA      NA
+4.0     0.33108030000   NA      NA
+4.1     0.38350390000   NA      NA
+4.2     0.43622630000   NA      NA
+4.3     0.48923040000   NA      NA
+4.4     0.54265730000   NA      NA
+4.5     0.59645870000   NA      NA
+4.6     0.65050570000   NA      NA
+4.7     0.70474270000   NA      NA
+4.8     0.75917450000   NA      NA
+4.9     0.81387320000   NA      NA
+5.0     0.86884470000   NA      NA
+
+|
+|   end pulldown 
+|
+[Pullup]
+| Voltage  I(typ)       I(min)  I(max)
+5.0     -0.86636870000  NA      NA
+4.9     -0.81166180000  NA      NA
+4.8     -0.75709070000  NA      NA
+4.7     -0.70269340000  NA      NA
+4.6     -0.64854260000  NA      NA
+4.5     -0.59477610000  NA      NA
+4.4     -0.54141770000  NA      NA
+4.3     -0.48826900000  NA      NA
+4.2     -0.43530580000  NA      NA
+4.1     -0.38257380000  NA      NA
+4.0     -0.33014410000  NA      NA
+3.9     -0.27812540000  NA      NA
+3.8     -0.22669590000  NA      NA
+3.7     -0.17617560000  NA      NA
+3.6     -0.12722060000  NA      NA
+3.5     -0.08147800000  NA      NA
+3.4     -0.04447034000  NA      NA
+3.3     -0.03007328000  NA      NA
+3.2     -0.02874622000  NA      NA
+3.1     -0.02820000000  NA      NA
+3.0     -0.02761748000  NA      NA
+2.9     -0.02700266000  NA      NA
+2.8     -0.02637516000  NA      NA
+2.7     -0.02571576000  NA      NA
+2.6     -0.02501935000  NA      NA
+2.5     -0.02428925000  NA      NA
+2.4     -0.02352860000  NA      NA
+2.3     -0.02274006000  NA      NA
+2.2     -0.02192593000  NA      NA
+2.1     -0.02108819000  NA      NA
+2.0     -0.02022858000  NA      NA
+1.9     -0.01934864000  NA      NA
+1.8     -0.01844974000  NA      NA
+1.7     -0.01753309000  NA      NA
+1.6     -0.01659979000  NA      NA
+1.5     -0.01565083000  NA      NA
+1.4     -0.01468711000  NA      NA
+1.3     -0.01370944000  NA      NA
+1.2     -0.01271856000  NA      NA
+1.1     -0.01171515000  NA      NA
+1.0     -0.01069985000  NA      NA
+0.9     -0.00967321200  NA      NA
+0.8     -0.00863578200  NA      NA
+0.7     -0.00758804700  NA      NA
+0.6     -0.00653046500  NA      NA
+0.5     -0.00546345700  NA      NA
+0.4     -0.00438742000  NA      NA
+0.3     -0.00330272200  NA      NA
+0.2     -0.00220970800  NA      NA
+0.1     -0.00110869900  NA      NA
+0.0     0.00000000008   NA      NA
+-0.1    0.00111427500   NA      NA
+-0.2    0.00223220900   NA      NA
+-0.3    0.00335413500   NA      NA
+-0.4    0.00448599600   NA      NA
+-0.5    0.00564994500   NA      NA
+-0.6    0.00684292400   NA      NA
+-0.7    0.00807538600   NA      NA
+-0.8    0.01041043000   NA      NA
+-0.9    0.02782983000   NA      NA
+-1.0    0.06718854000   NA      NA
+-1.1    0.11443380000   NA      NA
+-1.2    0.16465000000   NA      NA
+-1.3    0.21634820000   NA      NA
+-1.4    0.26892310000   NA      NA
+-1.5    0.32207480000   NA      NA
+-1.6    0.37563470000   NA      NA
+-1.7    0.42949900000   NA      NA
+-1.8    0.48359960000   NA      NA
+-1.9    0.53788980000   NA      NA
+-2.0    0.59233620000   NA      NA
+-2.1    0.64691450000   NA      NA
+-2.2    0.70160650000   NA      NA
+-2.3    0.75639830000   NA      NA
+-2.4    0.81127950000   NA      NA
+-2.5    0.86624180000   NA      NA
+
+|
+|   end pullup
+|
+[Ramp]
+|              typ          min        max
+dV/dt_r     1.625V/.110ns    NA         NA
+dV/dt_f     1.625V/.107ns    NA         NA
+R_load=10k  
+|----------------------------end cmos_output model---------------
+|
+[model] cmos_bidir
+Model_type I/O
+Vinl = 0.875
+Vinh = 1.625
+|
+Cref  =   3.000pF
+Rref  =   10kOhm
+Vref  =   2.5V
+Vmeas =   2.3V
+|
+|          
+|                        typ    min    max
+C_comp                   4pF    NA     NA
+|
+[Voltage Range]         2.500V  NA     NA
+[GND Clamp Reference]   0.000V  NA     NA
+[POWER Clamp Reference] 2.500V  NA     NA
+|
+|
+[GND Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.85758510000  NA      NA
+-2.4    -0.80233420000  NA      NA
+-2.3    -0.74715480000  NA      NA
+-2.2    -0.69205760000  NA      NA
+-2.1    -0.63705640000  NA      NA
+-2.0    -0.58216820000  NA      NA
+-1.9    -0.52741540000  NA      NA
+-1.8    -0.47282740000  NA      NA
+-1.7    -0.41844470000  NA      NA
+-1.6    -0.36432460000  NA      NA
+-1.5    -0.31055140000  NA      NA
+-1.4    -0.25725530000  NA      NA
+-1.3    -0.20464220000  NA      NA
+-1.2    -0.15304610000  NA      NA
+-1.1    -0.10311040000  NA      NA
+-1.0    -0.05647296000  NA      NA
+-0.9    -0.01866477000  NA      NA
+-0.8    -0.00358393100  NA      NA
+-0.7    -0.00172495600  NA      NA
+-0.6    -0.00085033000  NA      NA
+-0.5    -0.00024293950  NA      NA
+-0.4    -0.00002356171  NA      NA
+-0.3    -0.00000083664  NA      NA
+-0.2    -0.00000001872  NA      NA
+-0.1    -0.00000000051  NA      NA
+0.0     -0.00000000012  NA      NA
+0.1     -0.00000000010  NA      NA
+0.2     -0.00000000009  NA      NA
+0.3     -0.00000000008  NA      NA
+0.4     -0.00000000007  NA      NA
+0.5     -0.00000000006  NA      NA
+0.6     -0.00000000005  NA      NA
+0.7     -0.00000000004  NA      NA
+0.8     -0.00000000004  NA      NA
+0.9     -0.00000000003  NA      NA
+1.0     -0.00000000002  NA      NA
+1.1     -0.00000000001  NA      NA
+1.2     -0.00000000001  NA      NA
+1.3     0.00000000000   NA      NA
+1.4     0.00000000001   NA      NA
+1.5     0.00000000001   NA      NA
+1.6     0.00000000002   NA      NA
+1.7     0.00000000003   NA      NA
+1.8     0.00000000003   NA      NA
+1.9     0.00000000004   NA      NA
+2.0     0.00000000005   NA      NA
+2.1     0.00000000005   NA      NA
+2.2     0.00000000006   NA      NA
+2.3     0.00000000007   NA      NA
+2.4     0.00000000008   NA      NA
+2.5     0.00000000009   NA      NA
+
+|
+|
+[POWER Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+0.0     0.00000000009   NA      NA
+-0.1    0.00000000043   NA      NA
+-0.2    0.00000001386   NA      NA
+-0.3    0.00000048754   NA      NA
+-0.4    0.00001145612   NA      NA
+-0.5    0.00012702390   NA      NA
+-0.6    0.00054081190   NA      NA
+-0.7    0.00120797100   NA      NA
+-0.8    0.00309164300   NA      NA
+-0.9    0.02014503000   NA      NA
+-1.0    0.05925775000   NA      NA
+-1.1    0.10646550000   NA      NA
+-1.2    0.15683560000   NA      NA
+-1.3    0.20879250000   NA      NA
+-1.4    0.26167910000   NA      NA
+-1.5    0.31517120000   NA      NA
+-1.6    0.36908710000   NA      NA
+-1.7    0.42331560000   NA      NA
+-1.8    0.47778420000   NA      NA
+-1.9    0.53244250000   NA      NA
+-2.0    0.58725470000   NA      NA
+-2.1    0.64219420000   NA      NA
+-2.2    0.69724090000   NA      NA
+-2.3    0.75237910000   NA      NA
+-2.4    0.80759630000   NA      NA
+-2.5    0.86288240000   NA      NA
+
+|
+|
+[Pulldown]
+| Voltage  I(typ)       I(min)  I(max)
+-2.5    -0.86070680000  NA      NA
+-2.4    -0.80584590000  NA      NA
+-2.3    -0.75105270000  NA      NA
+-2.2    -0.69633900000  NA      NA
+-2.1    -0.64171870000  NA      NA
+-2.0    -0.58720850000  NA      NA
+-1.9    -0.53282930000  NA      NA
+-1.8    -0.47860840000  NA      NA
+-1.7    -0.42458190000  NA      NA
+-1.6    -0.37079960000  NA      NA
+-1.5    -0.31733260000  NA      NA
+-1.4    -0.26428990000  NA      NA
+-1.3    -0.21185040000  NA      NA
+-1.2    -0.16033640000  NA      NA
+-1.1    -0.11040850000  NA      NA
+-1.0    -0.06372068000  NA      NA
+-0.9    -0.02580564000  NA      NA
+-0.8    -0.01055239000  NA      NA
+-0.7    -0.00843379500  NA      NA
+-0.6    -0.00716635600  NA      NA
+-0.5    -0.00592739000  NA      NA
+-0.4    -0.00471102900  NA      NA
+-0.3    -0.00352845400  NA      NA
+-0.2    -0.00235416200  NA      NA
+-0.1    -0.00117819100  NA      NA
+0.0     -0.00000000012  NA      NA
+0.1     0.00117440700   NA      NA
+0.2     0.00233864300   NA      NA
+0.3     0.00349216900   NA      NA
+0.4     0.00463440300   NA      NA
+0.5     0.00576471600   NA      NA
+0.6     0.00688242800   NA      NA
+0.7     0.00798680000   NA      NA
+0.8     0.00907702600   NA      NA
+0.9     0.01015223000   NA      NA
+1.0     0.01121144000   NA      NA
+1.1     0.01225361000   NA      NA
+1.2     0.01327758000   NA      NA
+1.3     0.01428204000   NA      NA
+1.4     0.01526558000   NA      NA
+1.5     0.01622658000   NA      NA
+1.6     0.01716326000   NA      NA
+1.7     0.01807359000   NA      NA
+1.8     0.01895524000   NA      NA
+1.9     0.01980556000   NA      NA
+2.0     0.02062144000   NA      NA
+2.1     0.02139919000   NA      NA
+2.2     0.02213424000   NA      NA
+2.3     0.02282069000   NA      NA
+2.4     0.02345019000   NA      NA
+2.5     0.02400965000   NA      NA
+2.6     0.02447916000   NA      NA
+2.7     0.02484081000   NA      NA
+2.8     0.02510227000   NA      NA
+2.9     0.02529845000   NA      NA
+3.0     0.02547780000   NA      NA
+3.1     0.02565376000   NA      NA
+3.2     0.02584631000   NA      NA
+3.3     0.02712415000   NA      NA
+3.4     0.04347250000   NA      NA
+3.5     0.08174848000   NA      NA
+3.6     0.12790070000   NA      NA
+3.7     0.17701450000   NA      NA
+3.8     0.22760150000   NA      NA
+3.9     0.27905660000   NA      NA
+4.0     0.33108030000   NA      NA
+4.1     0.38350390000   NA      NA
+4.2     0.43622630000   NA      NA
+4.3     0.48923040000   NA      NA
+4.4     0.54265730000   NA      NA
+4.5     0.59645870000   NA      NA
+4.6     0.65050570000   NA      NA
+4.7     0.70474270000   NA      NA
+4.8     0.75917450000   NA      NA
+4.9     0.81387320000   NA      NA
+5.0     0.86884470000   NA      NA
+
+|
+|----end Pulldown data-----------------------------------------
+|
+[Pullup]
+| Voltage  I(typ)       I(min)  I(max)
+5       -0.86636870000  NA      NA
+4.9     -0.81166180000  NA      NA
+4.8     -0.75709070000  NA      NA
+4.7     -0.70269340000  NA      NA
+4.6     -0.64854260000  NA      NA
+4.5     -0.59477610000  NA      NA
+4.4     -0.54141770000  NA      NA
+4.3     -0.48826900000  NA      NA
+4.2     -0.43530580000  NA      NA
+4.1     -0.38257380000  NA      NA
+4       -0.33014410000  NA      NA
+3.9     -0.27812540000  NA      NA
+3.8     -0.22669590000  NA      NA
+3.7     -0.17617560000  NA      NA
+3.6     -0.12722060000  NA      NA
+3.5     -0.08147800000  NA      NA
+3.4     -0.04447034000  NA      NA
+3.3     -0.03007328000  NA      NA
+3.2     -0.02874622000  NA      NA
+3.1     -0.02820000000  NA      NA
+3       -0.02761748000  NA      NA
+2.9     -0.02700266000  NA      NA
+2.8     -0.02637516000  NA      NA
+2.7     -0.02571576000  NA      NA
+2.6     -0.02501935000  NA      NA
+2.5     -0.02428925000  NA      NA
+2.4     -0.02352860000  NA      NA
+2.3     -0.02274006000  NA      NA
+2.2     -0.02192593000  NA      NA
+2.1     -0.02108819000  NA      NA
+2       -0.02022858000  NA      NA
+1.9     -0.01934864000  NA      NA
+1.8     -0.01844974000  NA      NA
+1.7     -0.01753309000  NA      NA
+1.6     -0.01659979000  NA      NA
+1.5     -0.01565083000  NA      NA
+1.4     -0.01468711000  NA      NA
+1.3     -0.01370944000  NA      NA
+1.2     -0.01271856000  NA      NA
+1.1     -0.01171515000  NA      NA
+1       -0.01069985000  NA      NA
+0.9     -0.00967321200  NA      NA
+0.8     -0.00863578200  NA      NA
+0.7     -0.00758804700  NA      NA
+0.6     -0.00653046500  NA      NA
+0.5     -0.00546345700  NA      NA
+0.4     -0.00438742000  NA      NA
+0.3     -0.00330272200  NA      NA
+0.2     -0.00220970800  NA      NA
+0.1     -0.00110869900  NA      NA
+0       0.00000000008   NA      NA
+-0.1    0.00111427500   NA      NA
+-0.2    0.00223220900   NA      NA
+-0.3    0.00335413500   NA      NA
+-0.4    0.00448599600   NA      NA
+-0.5    0.00564994500   NA      NA
+-0.6    0.00684292400   NA      NA
+-0.7    0.00807538600   NA      NA
+-0.8    0.01041043000   NA      NA
+-0.9    0.02782983000   NA      NA
+-1      0.06718854000   NA      NA
+-1.1    0.11443380000   NA      NA
+-1.2    0.16465000000   NA      NA
+-1.3    0.21634820000   NA      NA
+-1.4    0.26892310000   NA      NA
+-1.5    0.32207480000   NA      NA
+-1.6    0.37563470000   NA      NA
+-1.7    0.42949900000   NA      NA
+-1.8    0.48359960000   NA      NA
+-1.9    0.53788980000   NA      NA
+-2      0.59233620000   NA      NA
+-2.1    0.64691450000   NA      NA
+-2.2    0.70160650000   NA      NA
+-2.3    0.75639830000   NA      NA
+-2.4    0.81127950000   NA      NA
+-2.5    0.86624180000   NA      NA
+
+|
+|
+[Ramp]
+|              typ          min        max
+dV/dt_r     1.625V/.111ns    NA         NA
+dV/dt_f     1.625V/.107ns    NA         NA
+R_load=10k
+|
+|
+|--end cmos_bidir model-----------------------------------------------------
+|
+|
+[MODEL] GPO
+Model_type 3-state
+Polarity Non-Inverting
+Cref  =   3.000pF
+Rref  =   330Ohm
+Vref  =   3.3V
+Vmeas =   3.0V
+|
+|GPOs are 3.3v only
+|
+|                        typ        min         max
+C_comp                  3.000pF     NA          NA
+|
+|
+[Voltage Range]         3.300V  NA     NA
+[GND Clamp Reference]   0.000V  NA     NA
+[POWER Clamp Reference] 3.300V  NA     NA
+|
+[GND Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+-3.3    -1.99264300000  NA      NA
+-3.2    -1.90911650000  NA      NA
+-3.1    -1.82569000000  NA      NA
+-3.0    -1.74223300000  NA      NA
+-2.9    -1.65879400000  NA      NA
+-2.8    -1.57538000000  NA      NA
+-2.7    -1.49199600000  NA      NA
+-2.6    -1.40864900000  NA      NA
+-2.5    -1.32534900000  NA      NA
+-2.4    -1.24210400000  NA      NA
+-2.3    -1.15892600000  NA      NA
+-2.2    -1.07582900000  NA      NA
+-2.1    -0.99282860000  NA      NA
+-2.0    -0.90994510000  NA      NA
+-1.9    -0.82720310000  NA      NA
+-1.8    -0.74463410000  NA      NA
+-1.7    -0.66227910000  NA      NA
+-1.6    -0.58019380000  NA      NA
+-1.5    -0.49845670000  NA      NA
+-1.4    -0.41718490000  NA      NA
+-1.3    -0.33656590000  NA      NA
+-1.2    -0.25693020000  NA      NA
+-1.1    -0.17894570000  NA      NA
+-1.0    -0.10427100000  NA      NA
+-0.9    -0.03842996000  NA      NA
+-0.8    -0.00987570200  NA      NA
+-0.7    -0.00482872700  NA      NA
+-0.6    -0.00192444900  NA      NA
+-0.5    -0.00040681130  NA      NA
+-0.4    -0.00002883500  NA      NA
+-0.3    -0.00000082834  NA      NA
+-0.2    -0.00000001652  NA      NA
+-0.1    -0.00000000044  NA      NA
+0.0     -0.00000000011  NA      NA
+0.1     -0.00000000008  NA      NA
+0.2     -0.00000000006  NA      NA
+0.3     -0.00000000004  NA      NA
+0.4     -0.00000000003  NA      NA
+0.5     -0.00000000002  NA      NA
+0.6     -0.00000000001  NA      NA
+0.7     -0.00000000001  NA      NA
+0.8     0.00000000000   NA      NA
+0.9     0.00000000000   NA      NA
+1.0     0.00000000000   NA      NA
+1.1     0.00000000000   NA      NA
+1.2     0.00000000000   NA      NA
+1.3     0.00000000000   NA      NA
+1.4     0.00000000001   NA      NA
+1.5     0.00000000001   NA      NA
+1.6     0.00000000001   NA      NA
+1.7     0.00000000001   NA      NA
+1.8     0.00000000001   NA      NA
+1.9     0.00000000001   NA      NA
+2.0     0.00000000001   NA      NA
+2.1     0.00000000001   NA      NA
+2.2     0.00000000001   NA      NA
+2.3     0.00000000001   NA      NA
+2.4     0.00000000002   NA      NA
+2.5     0.00000000002   NA      NA
+2.6     0.00000000002   NA      NA
+2.7     0.00000000002   NA      NA
+2.8     0.00000000002   NA      NA
+2.9     0.00000000002   NA      NA
+3.0     0.00000000002   NA      NA
+3.1     0.00000000002   NA      NA
+3.2     0.00000000002   NA      NA
+3.3     0.00000000003   NA      NA
+|
+|
+[POWER Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+0.0     0.00000000003   NA      NA
+-0.1    0.00000000008   NA      NA
+-0.2    0.00000000260   NA      NA
+-0.3    0.00000012024   NA      NA
+-0.4    0.00000431100   NA      NA
+-0.5    0.00008864520   NA      NA
+-0.6    0.00054089460   NA      NA
+-0.7    0.00143321700   NA      NA
+-0.8    0.00397879200   NA      NA
+-0.9    0.03101522000   NA      NA
+-1.0    0.09634732000   NA      NA
+-1.1    0.16960520000   NA      NA
+-1.2    0.24587560000   NA      NA
+-1.3    0.32367170000   NA      NA
+-1.4    0.40239000000   NA      NA
+-1.5    0.48173340000   NA      NA
+-1.6    0.56153560000   NA      NA
+-1.7    0.64169530000   NA      NA
+-1.8    0.72214640000   NA      NA
+-1.9    0.80284410000   NA      NA
+-2.0    0.88375710000   NA      NA
+-2.1    0.96486320000   NA      NA
+-2.2    1.04614700000   NA      NA
+-2.3    1.12759700000   NA      NA
+-2.4    1.20920500000   NA      NA
+-2.5    1.29096800000   NA      NA
+-2.6    1.37288200000   NA      NA
+-2.7    1.45494700000   NA      NA
+-2.8    1.53716400000   NA      NA
+-2.9    1.61953500000   NA      NA
+-3.0    1.70206400000   NA      NA
+-3.1    1.78475500000   NA      NA
+-3.2    1.86761400000   NA      NA
+-3.3    1.95064700000   NA      NA
+|
+|
+|
+|
+[Pulldown]
+| Voltage   I(typ)      I(min)   I(max)
+-3.3    -0.05490900000  NA      NA
+-3.2    -0.05566650000  NA      NA
+-3.1    -0.05629900000  NA      NA
+-3.0    -0.05693600000  NA      NA
+-2.9    -0.05753100000  NA      NA
+-2.8    -0.05807700000  NA      NA
+-2.7    -0.05856900000  NA      NA
+-2.6    -0.05900400000  NA      NA
+-2.5    -0.05937300000  NA      NA
+-2.4    -0.05986961111  NA      NA
+-2.3    -0.05989600000  NA      NA
+-2.2    -0.06022274008  NA      NA
+-2.1    -0.06008240000  NA      NA
+-2.0    -0.06002950000  NA      NA
+-1.9    -0.05986830000  NA      NA
+-1.8    -0.05958900000  NA      NA
+-1.7    -0.05918130000  NA      NA
+-1.6    -0.05863450000  NA      NA
+-1.5    -0.05793690000  NA      NA
+-1.4    -0.05707640000  NA      NA
+-1.3    -0.05603990000  NA      NA
+-1.2    -0.05481360000  NA      NA
+-1.1    -0.05338220000  NA      NA
+-1.0    -0.05172450000  NA      NA
+-0.9    -0.05805302000  NA      NA
+-0.8    -0.06315592800  NA      NA
+-0.7    -0.05833198300  NA      NA
+-0.6    -0.05230204100  NA      NA
+-0.5    -0.04495985870  NA      NA
+-0.4    -0.03648225500  NA      NA
+-0.3    -0.02760685166  NA      NA
+-0.2    -0.01858421348  NA      NA
+-0.1    -0.00939364256  NA      NA
+0.0     0.00000000000   NA      NA
+0.1     0.00921727908   NA      NA
+0.2     0.01785998006   NA      NA
+0.3     0.02593430004   NA      NA
+0.4     0.03344850003   NA      NA
+0.5     0.04041263002   NA      NA
+0.6     0.04683811001   NA      NA
+0.7     0.05273746001   NA      NA
+0.8     0.05812405000   NA      NA
+0.9     0.06301177000   NA      NA
+1.0     0.06741484000   NA      NA
+1.1     0.07134757000   NA      NA
+1.2     0.07482389000   NA      NA
+1.3     0.07785666000   NA      NA
+1.4     0.08045571999   NA      NA
+1.5     0.08262305998   NA      NA
+1.6     0.08434605999   NA      NA
+1.7     0.08561896991   NA      NA
+1.8     0.08651281990   NA      NA
+1.9     0.08715363989   NA      NA
+2.0     0.08763945988   NA      NA
+2.1     0.08802746999   NA      NA
+2.2     0.08835002998   NA      NA
+2.3     0.08862629999   NA      NA
+2.4     0.08886831998   NA      NA
+2.5     0.08908404998   NA      NA
+2.6     0.08927903918   NA      NA
+2.7     0.08945726998   NA      NA
+2.8     0.08962173981   NA      NA
+2.9     0.08977483998   NA      NA
+3.0     0.08991860998   NA      NA
+3.1     0.09005499998   NA      NA
+3.2     0.09018600998   NA      NA
+3.3     0.09039779111   NA      NA
+3.4     0.09044133000   NA      NA
+3.5     0.09057131000   NA      NA
+3.6     0.09070754000   NA      NA
+3.7     0.09085804000   NA      NA
+3.8     0.09110348000   NA      NA
+3.9     0.09173664000   NA      NA
+4.0     0.09283512000   NA      NA
+4.1     0.09561786000   NA      NA
+4.2     0.12292850000   NA      NA
+4.3     0.18857800000   NA      NA
+4.4     0.26220270000   NA      NA
+4.5     0.33889590000   NA      NA
+4.6     0.41717660000   NA      NA
+4.7     0.49644790000   NA      NA
+4.8     0.57641840000   NA      NA
+4.9     0.65692760000   NA      NA
+5.0     0.73787970000   NA      NA
+5.1     0.81921390000   NA      NA
+5.2     0.90089030000   NA      NA
+5.3     0.98288220000   NA      NA
+5.4     1.06517200000   NA      NA
+5.5     1.14774700000   NA      NA
+5.6     1.23060100000   NA      NA
+5.7     1.31372900000   NA      NA
+5.8     1.39713000000   NA      NA
+5.9     1.48080300000   NA      NA
+6.0     1.56475000000   NA      NA
+6.1     1.64897500000   NA      NA
+6.2     1.73348100000   NA      NA
+6.3     1.81827300000   NA      NA
+6.4     1.90335800000   NA      NA
+6.5     1.98874200000   NA      NA
+6.6     2.07443100000   NA      NA
+|                                   
+|   end     pulldown                
+[Pullup]                            
+| Voltage  I(typ)       I(min)  I(max)
+6.6     -2.03952800000  NA      NA
+6.5     -1.95551600000  NA      NA
+6.4     -1.87157000000  NA      NA
+6.3     -1.78769000000  NA      NA
+6.2     -1.70387500000  NA      NA
+6.1     -1.62012900000  NA      NA
+6.0     -1.53645200000  NA      NA
+5.9     -1.45284900000  NA      NA
+5.8     -1.36932400000  NA      NA
+5.7     -1.28588300000  NA      NA
+5.6     -1.20253300000  NA      NA
+5.5     -1.11928700000  NA      NA
+5.4     -1.03615600000  NA      NA
+5.3     -0.95315690000  NA      NA
+5.2     -0.87031300000  NA      NA
+5.1     -0.78765270000  NA      NA
+5.0     -0.70521500000  NA      NA
+4.9     -0.62305360000  NA      NA
+4.8     -0.54124520000  NA      NA
+4.7     -0.45990540000  NA      NA
+4.6     -0.37922040000  NA      NA
+4.5     -0.29951960000  NA      NA
+4.4     -0.22146990000  NA      NA
+4.3     -0.14672940000  NA      NA
+4.2     -0.08082097000  NA      NA
+4.1     -0.05219735000  NA      NA
+4.0     -0.04707854000  NA      NA
+3.9     -0.04409952000  NA      NA
+3.8     -0.04250381000  NA      NA
+3.7     -0.04204400000  NA      NA
+3.6     -0.04192994000  NA      NA
+3.5     -0.04183832000  NA      NA
+3.4     -0.04174212000  NA      NA
+3.3     -0.04163982000  NA      NA
+3.2     -0.04153050000  NA      NA
+3.1     -0.04141307000  NA      NA
+3.0     -0.04128611000  NA      NA
+2.9     -0.04114784000  NA      NA
+2.8     -0.04099593000  NA      NA
+2.7     -0.04082726000  NA      NA
+2.6     -0.04063755000  NA      NA
+2.5     -0.04042070000  NA      NA
+2.4     -0.04016779000  NA      NA
+2.3     -0.03986537000  NA      NA
+2.2     -0.03949336000  NA      NA
+2.1     -0.03902541000  NA      NA
+2.0     -0.03843845000  NA      NA
+1.9     -0.03772478000  NA      NA
+1.8     -0.03688646000  NA      NA
+1.7     -0.03592547000  NA      NA
+1.6     -0.03484205000  NA      NA
+1.5     -0.03363558000  NA      NA
+1.4     -0.03230504000  NA      NA
+1.3     -0.03084930000  NA      NA
+1.2     -0.02926718000  NA      NA
+1.1     -0.02755745000  NA      NA
+1.0     -0.02571894000  NA      NA
+0.9     -0.02375045000  NA      NA
+0.8     -0.02165082000  NA      NA
+0.7     -0.01941889000  NA      NA
+0.6     -0.01705354000  NA      NA
+0.5     -0.01455367000  NA      NA
+0.4     -0.01191821000  NA      NA
+0.3     -0.00914611500  NA      NA
+0.2     -0.00623636400  NA      NA
+0.1     -0.00318797700  NA      NA
+0.0     0.00000000000   NA      NA
+-0.1    0.00328704592   NA      NA
+-0.2    0.00663978240   NA      NA
+-0.3    0.01007483976   NA      NA
+-0.4    0.01361621900   NA      NA
+-0.5    0.01724622480   NA      NA
+-0.6    0.02077671540   NA      NA
+-0.7    0.02432933300   NA      NA
+-0.8    0.02829356800   NA      NA
+-0.9    0.02620704000   NA      NA
+-1.0    0.02477928000   NA      NA
+-1.1    0.02630920000   NA      NA
+-1.2    0.02776670000   NA      NA
+-1.3    0.02916150000   NA      NA
+-1.4    0.03049530000   NA      NA
+-1.5    0.03176680000   NA      NA
+-1.6    0.03297380000   NA      NA
+-1.7    0.03411350000   NA      NA
+-1.8    0.03518310000   NA      NA
+-1.9    0.03617930000   NA      NA
+-2.0    0.03709860000   NA      NA
+-2.1    0.03793680000   NA      NA
+-2.2    0.03869100000   NA      NA
+-2.3    0.03935500000   NA      NA
+-2.4    0.03992600000   NA      NA
+-2.5    0.04039700000   NA      NA
+-2.6    0.04076300000   NA      NA
+-2.7    0.04101800000   NA      NA
+-2.8    0.04115500000   NA      NA
+-2.9    0.04116600000   NA      NA
+-3.0    0.04104500000   NA      NA
+-3.1    0.04037546667   NA      NA
+-3.2    0.04037100000   NA      NA
+-3.3    0.03980100000   NA      NA
+|  end pullup
+|
+|                               
+[Ramp]
+|              typ          min        max
+dV/dt_r     1.98V/.129ns     NA         NA       
+dV/dt_f     1.98V/.204ns     NA         NA
+R_load=10k  
+|
+|
+|---end GPO model----------------------------------------------------------
+|
+|
+|
+[model] p0_LVDS_IN
+Model_type Input
+Vinl = 0.875
+Vinh = 1.625
+|
+|
+C_comp 4pF NA NA
+|
+|
+| variable               typ    min    max
+[Voltage Range]         2.500V  NA      NA
+[GND Clamp Reference]   0.000V  NA      NA
+[POWER Clamp Reference] 2.500V  NA      NA
+|
+[GND Clamp]
+| Voltage  I(typ)       I(min)  I(max)
+-2.50E+00     -8.98E-01     NA     NA
+-2.40E+00     -8.40E-01     NA     NA
+-2.30E+00     -7.83E-01     NA     NA
+-2.20E+00     -7.25E-01     NA     NA
+-2.10E+00     -6.68E-01     NA     NA
+-2.00E+00     -6.11E-01     NA     NA
+-1.90E+00     -5.54E-01     NA     NA
+-1.80E+00     -4.97E-01     NA     NA
+-1.70E+00     -4.41E-01     NA     NA
+-1.60E+00     -3.85E-01     NA     NA
+-1.50E+00     -3.30E-01     NA     NA
+-1.40E+00     -2.76E-01     NA     NA
+-1.30E+00     -2.22E-01     NA     NA
+-1.20E+00     -1.68E-01     NA     NA
+-1.10E+00     -1.16E-01     NA     NA
+-1.00E+00     -6.73E-02     NA     NA
+-9.00E-01     -2.75E-02     NA     NA
+-8.00E-01     -1.04E-02     NA     NA
+-7.00E-01     -6.65E-03     NA     NA
+-6.00E-01     -3.98E-03     NA     NA
+-5.88E-01     -3.67E-03     NA     NA
+-5.63E-01     -3.08E-03     NA     NA
+-5.56E-01     -2.94E-03     NA     NA
+-5.55E-01     -2.90E-03     NA     NA
+-5.52E-01     -2.83E-03     NA     NA
+-5.51E-01     -2.81E-03     NA     NA
+-5.49E-01     -2.78E-03     NA     NA
+-5.00E-01     -1.77E-03     NA     NA
+-4.00E-01     -4.01E-04     NA     NA
+-3.00E-01     -2.42E-05     NA     NA
+-2.00E-01     -6.46E-07     NA     NA
+-1.00E-01     -1.54E-08     NA     NA
+0.00E+00     -5.53E-10     NA     NA
+1.00E-01     -1.80E-10     NA     NA
+2.00E-01     -1.49E-10     NA     NA
+3.00E-01     -1.29E-10     NA     NA
+4.00E-01     -1.12E-10     NA     NA
+5.00E-01     -9.69E-11     NA     NA
+6.00E-01     -8.28E-11     NA     NA
+7.00E-01     -6.96E-11     NA     NA
+8.00E-01     -5.70E-11     NA     NA
+9.00E-01     -4.51E-11     NA     NA
+1.00E+00     -3.35E-11     NA     NA
+1.01E+00     -3.21E-11     NA     NA
+1.04E+00     -2.93E-11     NA     NA
+1.09E+00     -2.30E-11     NA     NA
+1.10E+00     -2.23E-11     NA     NA
+1.20E+00     -1.15E-11     NA     NA
+1.22E+00     -9.73E-12     NA     NA
+1.30E+00     -7.96E-13     NA     NA
+1.40E+00     9.71E-12     NA     NA
+1.50E+00     2.01E-11     NA     NA
+1.60E+00     3.06E-11     NA     NA
+1.70E+00     4.10E-11     NA     NA
+1.80E+00     5.16E-11     NA     NA
+1.90E+00     6.23E-11     NA     NA
+2.00E+00     7.33E-11     NA     NA
+2.10E+00     8.47E-11     NA     NA
+2.20E+00     9.64E-11     NA     NA
+2.30E+00     1.09E-10     NA     NA
+2.40E+00     1.41E-10     NA     NA
+2.50E+00     9.25E-10     NA     NA
+|
+|
+|
+[POWER Clamp]
+|-------------------------------------------------------------
+| Note: the[POWER_clamp] voltage table is relative to Vcc
+| and is calculated using Vtable = Vcc - Vmeasured.
+|-------------------------------------------------------------
+| Voltage  I(typ)       I(min)  I(max)
+0.00E+00     9.25E-10     NA     NA
+-1.00E-01     3.12E-08     NA     NA
+-2.00E-01     1.13E-06     NA     NA
+-3.00E-01     3.24E-05     NA     NA
+-4.00E-01     4.17E-04     NA     NA
+-4.13E-01     5.24E-04     NA     NA
+-4.38E-01     7.89E-04     NA     NA
+-4.40E-01     8.11E-04     NA     NA
+-4.41E-01     8.20E-04     NA     NA
+-5.00E-01     1.65E-03     NA     NA
+-6.00E-01     3.60E-03     NA     NA
+-7.00E-01     5.97E-03     NA     NA
+-8.00E-01     9.65E-03     NA     NA
+-9.00E-01     2.86E-02     NA     NA
+-1.00E+00     6.95E-02     NA     NA
+-1.10E+00     1.19E-01     NA     NA
+-1.20E+00     1.71E-01     NA     NA
+-1.30E+00     2.25E-01     NA     NA
+-1.40E+00     2.80E-01     NA     NA
+-1.50E+00     3.35E-01     NA     NA
+-1.60E+00     3.90E-01     NA     NA
+-1.70E+00     4.46E-01     NA     NA
+-1.80E+00     5.02E-01     NA     NA
+-1.90E+00     5.59E-01     NA     NA
+-2.00E+00     6.16E-01     NA     NA
+-2.10E+00     6.73E-01     NA     NA
+-2.20E+00     7.30E-01     NA     NA
+-2.30E+00     7.88E-01     NA     NA
+-2.40E+00     8.45E-01     NA     NA
+-2.50E+00     9.03E-01     NA     NA
+|
+|
+|
+|
+|--end p0_LVDS_INmodel---------------------------------
+|
+|
+|
+|
+[model] p1_LVDS_OUT
+Model_type 3-state
+Polarity   Non-Inverting
+|
+Cref  =   3.000pF
+Rref  =   5Ohm     | 100 Ohms Across Outputs P and N
+Vref  =   1.2V     | Common Mode Voltage
+Vmeas =   1.2V
+|
+C_comp 4pF NA NA
+|
+|
+| variable               typ    min    max
+[Voltage Range]         2.500V  NA      NA
+[GND Clamp Reference]   0.000V  NA      NA
+[POWER Clamp Reference] 2.500V  NA      NA
+|
+[GND Clamp]
+| Voltage        I(typ)       I(min)  I(max)
+-2.50E+00     -8.98E-01     NA     NA
+-2.40E+00     -8.40E-01     NA     NA
+-2.30E+00     -7.83E-01     NA     NA
+-2.20E+00     -7.25E-01     NA     NA
+-2.10E+00     -6.68E-01     NA     NA
+-2.00E+00     -6.11E-01     NA     NA
+-1.90E+00     -5.54E-01     NA     NA
+-1.80E+00     -4.97E-01     NA     NA
+-1.70E+00     -4.41E-01     NA     NA
+-1.60E+00     -3.85E-01     NA     NA
+-1.50E+00     -3.30E-01     NA     NA
+-1.40E+00     -2.76E-01     NA     NA
+-1.30E+00     -2.22E-01     NA     NA
+-1.20E+00     -1.68E-01     NA     NA
+-1.10E+00     -1.16E-01     NA     NA
+-1.00E+00     -6.73E-02     NA     NA
+-9.00E-01     -2.75E-02     NA     NA
+-8.00E-01     -1.04E-02     NA     NA
+-7.00E-01     -6.65E-03     NA     NA
+-6.00E-01     -3.98E-03     NA     NA
+-5.88E-01     -3.67E-03     NA     NA
+-5.63E-01     -3.08E-03     NA     NA
+-5.56E-01     -2.94E-03     NA     NA
+-5.55E-01     -2.90E-03     NA     NA
+-5.52E-01     -2.83E-03     NA     NA
+-5.51E-01     -2.81E-03     NA     NA
+-5.49E-01     -2.78E-03     NA     NA
+-5.00E-01     -1.77E-03     NA     NA
+-4.00E-01     -4.01E-04     NA     NA
+-3.00E-01     -2.42E-05     NA     NA
+-2.00E-01     -6.46E-07     NA     NA
+-1.00E-01     -1.54E-08     NA     NA
+0.00E+00     -5.53E-10     NA     NA
+1.00E-01     -1.80E-10     NA     NA
+2.00E-01     -1.49E-10     NA     NA
+3.00E-01     -1.29E-10     NA     NA
+4.00E-01     -1.12E-10     NA     NA
+5.00E-01     -9.69E-11     NA     NA
+6.00E-01     -8.28E-11     NA     NA
+7.00E-01     -6.96E-11     NA     NA
+8.00E-01     -5.70E-11     NA     NA
+9.00E-01     -4.51E-11     NA     NA
+1.00E+00     -3.35E-11     NA     NA
+1.01E+00     -3.21E-11     NA     NA
+1.04E+00     -2.93E-11     NA     NA
+1.09E+00     -2.30E-11     NA     NA
+1.10E+00     -2.23E-11     NA     NA
+1.20E+00     -1.15E-11     NA     NA
+1.22E+00     -9.73E-12     NA     NA
+1.30E+00     -7.96E-13     NA     NA
+1.40E+00     9.71E-12     NA     NA
+1.50E+00     2.01E-11     NA     NA
+1.60E+00     3.06E-11     NA     NA
+1.70E+00     4.10E-11     NA     NA
+1.80E+00     5.16E-11     NA     NA
+1.90E+00     6.23E-11     NA     NA
+2.00E+00     7.33E-11     NA     NA
+2.10E+00     8.47E-11     NA     NA
+2.20E+00     9.64E-11     NA     NA
+2.30E+00     1.09E-10     NA     NA
+2.40E+00     1.41E-10     NA     NA
+2.50E+00     9.25E-10     NA     NA
+|
+|
+|
+[POWER Clamp]
+|-------------------------------------------------------------
+| Note: the[POWER_clamp] voltage table is relative to Vcc
+| and is calculated using Vtable = Vcc - Vmeasured.
+|-------------------------------------------------------------
+| Voltage       I(typ)       I(min)  I(max)
+0.00E+00     9.25E-10     NA     NA
+-1.00E-01     3.12E-08     NA     NA
+-2.00E-01     1.13E-06     NA     NA
+-3.00E-01     3.24E-05     NA     NA
+-4.00E-01     4.17E-04     NA     NA
+-4.13E-01     5.24E-04     NA     NA
+-4.38E-01     7.89E-04     NA     NA
+-4.40E-01     8.11E-04     NA     NA
+-4.41E-01     8.20E-04     NA     NA
+-5.00E-01     1.65E-03     NA     NA
+-6.00E-01     3.60E-03     NA     NA
+-7.00E-01     5.97E-03     NA     NA
+-8.00E-01     9.65E-03     NA     NA
+-9.00E-01     2.86E-02     NA     NA
+-1.00E+00     6.95E-02     NA     NA
+-1.10E+00     1.19E-01     NA     NA
+-1.20E+00     1.71E-01     NA     NA
+-1.30E+00     2.25E-01     NA     NA
+-1.40E+00     2.80E-01     NA     NA
+-1.50E+00     3.35E-01     NA     NA
+-1.60E+00     3.90E-01     NA     NA
+-1.70E+00     4.46E-01     NA     NA
+-1.80E+00     5.02E-01     NA     NA
+-1.90E+00     5.59E-01     NA     NA
+-2.00E+00     6.16E-01     NA     NA
+-2.10E+00     6.73E-01     NA     NA
+-2.20E+00     7.30E-01     NA     NA
+-2.30E+00     7.88E-01     NA     NA
+-2.40E+00     8.45E-01     NA     NA
+-2.50E+00     9.03E-01     NA     NA
+|
+[Pulldown]
+|-------------------------------------------------------------
+| Note: the[Pulldown] current is limited to 200mA 
+|-------------------------------------------------------------
+| Voltage        I(typ)       I(min)  I(max)
+-2.50E+00     -2.00E-01     NA     NA
+-2.40E+00     -2.00E-01     NA     NA
+-2.30E+00     -2.00E-01     NA     NA
+-2.20E+00     -2.00E-01     NA     NA
+-2.10E+00     -2.00E-01     NA     NA
+-2.00E+00     -2.00E-01     NA     NA
+-1.90E+00     -2.00E-01     NA     NA
+-1.80E+00     -2.00E-01     NA     NA
+-1.70E+00     -2.00E-01     NA     NA
+-1.60E+00     -2.00E-01     NA     NA
+-1.50E+00     -2.00E-01     NA     NA
+-1.40E+00     -2.00E-01     NA     NA
+-1.30E+00     -2.00E-01     NA     NA
+-1.20E+00     -2.00E-01     NA     NA
+-1.10E+00     -1.63E-01     NA     NA
+-1.00E+00     -9.53E-02     NA     NA
+-9.00E-01     -4.20E-02     NA     NA
+-8.00E-01     -2.31E-02     NA     NA
+-7.00E-01     -1.85E-02     NA     NA
+-6.00E-01     -1.49E-02     NA     NA
+-5.88E-01     -1.44E-02     NA     NA
+-5.63E-01     -1.36E-02     NA     NA
+-5.56E-01     -1.34E-02     NA     NA
+-5.55E-01     -1.34E-02     NA     NA
+-5.51E-01     -1.32E-02     NA     NA
+-5.49E-01     -1.32E-02     NA     NA
+-5.00E-01     -1.17E-02     NA     NA
+-4.00E-01     -8.97E-03     NA     NA
+-3.00E-01     -6.61E-03     NA     NA
+-2.00E-01     -4.43E-03     NA     NA
+-1.00E-01     -2.45E-03     NA     NA
+0.00E+00     -7.45E-04     NA     NA
+1.00E-01     6.30E-04     NA     NA
+2.00E-01     1.64E-03     NA     NA
+3.00E-01     2.23E-03     NA     NA
+4.00E-01     2.44E-03     NA     NA
+5.00E-01     2.52E-03     NA     NA
+6.00E-01     2.59E-03     NA     NA
+7.00E-01     2.67E-03     NA     NA
+8.00E-01     2.76E-03     NA     NA
+9.00E-01     2.86E-03     NA     NA
+1.00E+00     2.97E-03     NA     NA
+1.01E+00     2.98E-03     NA     NA
+1.04E+00     3.01E-03     NA     NA
+1.09E+00     3.07E-03     NA     NA
+1.10E+00     3.08E-03     NA     NA
+1.20E+00     3.18E-03     NA     NA
+1.21E+00     3.19E-03     NA     NA
+1.22E+00     3.19E-03     NA     NA
+1.30E+00     3.24E-03     NA     NA
+1.40E+00     3.30E-03     NA     NA
+1.50E+00     3.36E-03     NA     NA
+1.60E+00     3.41E-03     NA     NA
+1.70E+00     3.47E-03     NA     NA
+1.80E+00     3.53E-03     NA     NA
+1.90E+00     3.58E-03     NA     NA
+2.00E+00     3.64E-03     NA     NA
+2.10E+00     3.69E-03     NA     NA
+2.20E+00     3.75E-03     NA     NA
+2.30E+00     3.81E-03     NA     NA
+2.40E+00     3.87E-03     NA     NA
+2.50E+00     3.92E-03     NA     NA
+2.60E+00     3.98E-03     NA     NA
+2.70E+00     4.04E-03     NA     NA
+2.80E+00     4.11E-03     NA     NA
+2.90E+00     4.35E-03     NA     NA
+2.91E+00     4.43E-03     NA     NA
+2.94E+00     4.72E-03     NA     NA
+3.00E+00     5.92E-03     NA     NA
+3.10E+00     9.72E-03     NA     NA
+3.20E+00     1.50E-02     NA     NA
+3.30E+00     2.27E-02     NA     NA
+3.40E+00     6.10E-02     NA     NA
+3.50E+00     1.36E-01     NA     NA
+3.60E+00     2.00E-01     NA     NA
+3.70E+00     2.00E-01     NA     NA
+3.80E+00     2.00E-01     NA     NA
+3.90E+00     2.00E-01     NA     NA
+4.00E+00     2.00E-01     NA     NA
+4.10E+00     2.00E-01     NA     NA
+4.20E+00     2.00E-01     NA     NA
+4.30E+00     2.00E-01     NA     NA
+4.40E+00     2.00E-01     NA     NA
+4.50E+00     2.00E-01     NA     NA
+4.60E+00     2.00E-01     NA     NA
+4.70E+00     2.00E-01     NA     NA
+4.80E+00     2.00E-01     NA     NA
+4.90E+00     2.00E-01     NA     NA
+5.00E+00     2.00E-01     NA     NA
+
+|
+|
+|----end Pulldown data-----------------------------------------
+|
+[Pullup]
+| Voltage        I(typ)       I(min)  I(max)
+-2.50E+00	0.2	NA	NA
+-2.40E+00	0.2	NA	NA
+-2.30E+00	0.2	NA	NA
+-2.20E+00	0.2	NA	NA
+-2.10E+00	0.2	NA	NA
+-2.00E+00	0.2	NA	NA
+-1.90E+00	0.2	NA	NA
+-1.80E+00	0.2	NA	NA
+-1.70E+00	0.2	NA	NA
+-1.60E+00	0.2	NA	NA
+-1.50E+00	0.2	NA	NA
+-1.40E+00	0.2	NA	NA
+-1.30E+00	0.2	NA	NA
+-1.20E+00	0.2	NA	NA
+-1.10E+00	0.163	NA	NA
+-1.00E+00	0.0953	NA	NA
+-9.00E-01	0.042	NA	NA
+-8.00E-01	0.0231	NA	NA
+-7.00E-01	0.0185	NA	NA
+-6.00E-01	0.0149	NA	NA
+-5.88E-01	0.0144	NA	NA
+-5.63E-01	0.0136	NA	NA
+-5.56E-01	0.0134	NA	NA
+-5.55E-01	0.0134	NA	NA
+-5.51E-01	0.0132	NA	NA
+-5.49E-01	0.0132	NA	NA
+-5.00E-01	0.0117	NA	NA
+-4.00E-01	0.00897	NA	NA
+-3.00E-01	0.00661	NA	NA
+-2.00E-01	0.00443	NA	NA
+-1.00E-01	0.00245	NA	NA
+0.00E+00	0.000745	NA	NA
+1.00E-01	-0.00063	NA	NA
+2.00E-01	-0.00164	NA	NA
+3.00E-01	-0.00223	NA	NA
+4.00E-01	-0.00244	NA	NA
+5.00E-01	-0.00252	NA	NA
+6.00E-01	-0.00259	NA	NA
+7.00E-01	-0.00267	NA	NA
+8.00E-01	-0.00276	NA	NA
+9.00E-01	-0.00286	NA	NA
+1.00E+00	-0.00297	NA	NA
+1.01E+00	-0.00298	NA	NA
+1.04E+00	-0.00301	NA	NA
+1.09E+00	-0.00307	NA	NA
+1.10E+00	-0.00308	NA	NA
+1.20E+00	-0.00318	NA	NA
+1.21E+00	-0.00319	NA	NA
+1.22E+00	-0.00319	NA	NA
+1.30E+00	-0.00324	NA	NA
+1.40E+00	-0.0033	       NA	NA
+1.50E+00	-0.00336	NA	NA
+1.60E+00	-0.00341	NA	NA
+1.70E+00	-0.00347	NA	NA
+1.80E+00	-0.00353	NA	NA
+1.90E+00	-0.00358	NA	NA
+2.00E+00	-0.00364	NA	NA
+2.10E+00	-0.00369	NA	NA
+2.20E+00	-0.00375	NA	NA
+2.30E+00	-0.00381	NA	NA
+2.40E+00	-0.00387	NA	NA
+2.50E+00	-0.00392	NA	NA
+2.60E+00	-0.00398	NA	NA
+2.70E+00	-0.00404	NA	NA
+2.80E+00	-0.00411	NA	NA
+2.90E+00	-0.00435	NA	NA
+2.91E+00	-0.00443	NA	NA
+2.94E+00	-0.00472	NA	NA
+3.00E+00	-0.00592	NA	NA
+3.10E+00	-0.00972	NA	NA
+3.20E+00	-0.015         	NA	NA
+3.30E+00	-0.0227	        NA	NA
+3.40E+00	-0.061	        NA	NA
+3.50E+00	-0.136	        NA	NA
+3.60E+00	-0.2	          NA	NA
+3.70E+00	-0.2	          NA	NA
+3.80E+00	-0.2	NA	NA
+3.90E+00	-0.2	NA	NA
+4.00E+00	-0.2	NA	NA
+4.10E+00	-0.2	NA	NA
+4.20E+00	-0.2	NA	NA
+4.30E+00	-0.2	NA	NA
+4.40E+00	-0.2	NA	NA
+4.50E+00	-0.2	NA	NA
+4.60E+00	-0.2	NA	NA
+4.70E+00	-0.2	NA	NA
+4.80E+00	-0.2	NA	NA
+4.90E+00	-0.2	NA	NA
+5.00E+00	-0.2	NA	NA
+
+|
+|-----end pullup data
+|
+[Ramp]
+|              typ           min        max
+dV/dt_r     1.625V/.082ns     NA         NA
+dV/dt_f     1.625V/.082ns     NA         NA
+R_load=50  
+|
+|
+[Falling Waveform]
+R_fixture=50
+V_fixture=1.25
+| Time          V(typ)       V(min)  V(max)
+0.000E+00     1.381E+00     NA     NA
+1.848E-10     1.393E+00     NA     NA
+3.527E-10     1.398E+00     NA     NA
+5.219E-10     1.402E+00     NA     NA
+5.441E-10     1.402E+00     NA     NA
+5.839E-10     1.403E+00     NA     NA
+6.215E-10     1.403E+00     NA     NA
+6.564E-10     1.404E+00     NA     NA
+6.843E-10     1.404E+00     NA     NA
+7.209E-10     1.405E+00     NA     NA
+7.518E-10     1.405E+00     NA     NA
+7.781E-10     1.405E+00     NA     NA
+8.134E-10     1.405E+00     NA     NA
+8.564E-10     1.406E+00     NA     NA
+9.420E-10     1.406E+00     NA     NA
+9.641E-10     1.406E+00     NA     NA
+9.839E-10     1.406E+00     NA     NA
+1.002E-09     1.406E+00     NA     NA
+1.023E-09     1.406E+00     NA     NA
+1.042E-09     1.407E+00     NA     NA
+1.064E-09     1.409E+00     NA     NA
+1.087E-09     1.414E+00     NA     NA
+1.106E-09     1.422E+00     NA     NA
+1.124E-09     1.431E+00     NA     NA
+1.141E-09     1.442E+00     NA     NA
+1.158E-09     1.450E+00     NA     NA
+1.175E-09     1.453E+00     NA     NA
+1.191E-09     1.452E+00     NA     NA
+1.206E-09     1.448E+00     NA     NA
+1.220E-09     1.443E+00     NA     NA
+1.235E-09     1.437E+00     NA     NA
+1.253E-09     1.427E+00     NA     NA
+1.270E-09     1.415E+00     NA     NA
+1.282E-09     1.404E+00     NA     NA
+1.299E-09     1.388E+00     NA     NA
+1.317E-09     1.369E+00     NA     NA
+1.339E-09     1.346E+00     NA     NA
+1.362E-09     1.324E+00     NA     NA
+1.390E-09     1.300E+00     NA     NA
+1.417E-09     1.280E+00     NA     NA
+1.449E-09     1.261E+00     NA     NA
+1.489E-09     1.240E+00     NA     NA
+1.532E-09     1.220E+00     NA     NA
+1.582E-09     1.200E+00     NA     NA
+1.649E-09     1.178E+00     NA     NA
+1.735E-09     1.157E+00     NA     NA
+1.856E-09     1.136E+00     NA     NA
+2.008E-09     1.120E+00     NA     NA
+2.214E-09     1.108E+00     NA     NA
+2.388E-09     1.103E+00     NA     NA
+2.563E-09     1.101E+00     NA     NA
+2.582E-09     1.100E+00     NA     NA
+2.613E-09     1.100E+00     NA     NA
+2.680E-09     1.100E+00     NA     NA
+2.721E-09     1.099E+00     NA     NA
+2.779E-09     1.099E+00     NA     NA
+2.815E-09     1.099E+00     NA     NA
+2.847E-09     1.099E+00     NA     NA
+2.886E-09     1.099E+00     NA     NA
+2.939E-09     1.098E+00     NA     NA
+2.970E-09     1.098E+00     NA     NA
+3.044E-09     1.098E+00     NA     NA
+3.115E-09     1.098E+00     NA     NA
+3.151E-09     1.098E+00     NA     NA
+3.170E-09     1.098E+00     NA     NA
+3.191E-09     1.098E+00     NA     NA
+3.214E-09     1.098E+00     NA     NA
+|
+|
+[Rising Waveform]
+R_fixture=50
+V_fixture=1.25
+| Time          V(typ)       V(min)  V(max)
+0.000E+00     1.112E+00     NA     NA
+1.679E-10     1.105E+00     NA     NA
+3.371E-10     1.102E+00     NA     NA
+3.593E-10     1.101E+00     NA     NA
+3.991E-10     1.101E+00     NA     NA
+4.210E-10     1.101E+00     NA     NA
+4.527E-10     1.100E+00     NA     NA
+4.828E-10     1.100E+00     NA     NA
+5.105E-10     1.100E+00     NA     NA
+5.409E-10     1.099E+00     NA     NA
+5.670E-10     1.099E+00     NA     NA
+5.933E-10     1.099E+00     NA     NA
+6.286E-10     1.099E+00     NA     NA
+6.716E-10     1.099E+00     NA     NA
+7.037E-10     1.098E+00     NA     NA
+7.572E-10     1.098E+00     NA     NA
+7.991E-10     1.098E+00     NA     NA
+8.175E-10     1.098E+00     NA     NA
+8.380E-10     1.098E+00     NA     NA
+8.574E-10     1.098E+00     NA     NA
+8.795E-10     1.098E+00     NA     NA
+9.023E-10     1.099E+00     NA     NA
+9.208E-10     1.099E+00     NA     NA
+9.389E-10     1.100E+00     NA     NA
+9.561E-10     1.101E+00     NA     NA
+9.731E-10     1.101E+00     NA     NA
+9.906E-10     1.100E+00     NA     NA
+1.006E-09     1.099E+00     NA     NA
+1.021E-09     1.097E+00     NA     NA
+1.036E-09     1.094E+00     NA     NA
+1.050E-09     1.090E+00     NA     NA
+1.068E-09     1.087E+00     NA     NA
+1.085E-09     1.086E+00     NA     NA
+1.097E-09     1.088E+00     NA     NA
+1.114E-09     1.090E+00     NA     NA
+1.133E-09     1.095E+00     NA     NA
+1.154E-09     1.108E+00     NA     NA
+1.177E-09     1.131E+00     NA     NA
+1.206E-09     1.168E+00     NA     NA
+1.233E-09     1.203E+00     NA     NA
+1.264E-09     1.235E+00     NA     NA
+1.304E-09     1.264E+00     NA     NA
+1.348E-09     1.290E+00     NA     NA
+1.397E-09     1.312E+00     NA     NA
+1.464E-09     1.334E+00     NA     NA
+1.550E-09     1.354E+00     NA     NA
+1.671E-09     1.373E+00     NA     NA
+1.823E-09     1.386E+00     NA     NA
+2.029E-09     1.396E+00     NA     NA
+2.203E-09     1.401E+00     NA     NA
+2.378E-09     1.403E+00     NA     NA
+2.397E-09     1.404E+00     NA     NA
+2.428E-09     1.404E+00     NA     NA
+2.495E-09     1.405E+00     NA     NA
+2.536E-09     1.405E+00     NA     NA
+2.594E-09     1.405E+00     NA     NA
+2.639E-09     1.406E+00     NA     NA
+2.682E-09     1.406E+00     NA     NA
+2.726E-09     1.406E+00     NA     NA
+2.786E-09     1.407E+00     NA     NA
+2.884E-09     1.407E+00     NA     NA
+2.908E-09     1.407E+00     NA     NA
+2.930E-09     1.407E+00     NA     NA
+2.949E-09     1.407E+00     NA     NA
+2.966E-09     1.407E+00     NA     NA
+2.985E-09     1.407E+00     NA     NA
+3.006E-09     1.408E+00     NA     NA
+3.029E-09     1.411E+00     NA     NA
+3.052E-09     1.417E+00     NA     NA
+|
+|
+|
+|--end p1_LVDS_OUT model---------------------------------
+|
+|
+|
+|
+[End]
+
+
+
+
+|******Modified by Cadence Design Systems*****
+|[ibis2signoise]
+|     VERSION= v16-3-85BB
+|     INPUT= C:\Users\rgandhi\Desktop\AD9361_IBIS_files\ad9361_2p5_lvds_r2.i
+|            bs
+|     EXECUTED_AT=   Wed Feb 8 14:22:45 2012
+|     FILE_MOD_TIME= Wed Feb 08 14:22:31 2012
+|     OUTPUT= C:\Users\rgandhi\Desktop\AD9361_IBIS_files\ad9361_2p5_lvds_r2.d
+|            ml
+|     OPTIONS=  -u  -ebdcomp 
+
+|[ibischk5  V5.0.3]
+|     EXECUTED_AT=   Wed Feb 8 14:22:31 2012
+|     FILE_MOD_TIME= Wed Feb 08 14:22:31 2012
+|     RESULT= 0 errors, 3 warnings
+
+|***End Cadence Design Systems Modification***
